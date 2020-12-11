@@ -16,10 +16,12 @@ class TripadvisorItem(scrapy.Item):
     cellphone = scrapy.Field()
     address = scrapy.Field()
     street = scrapy.Field()
+    city = scrapy.Field()
+    area = scrapy.Field()
     rating= scrapy.Field()
     comment = scrapy.Field()
     open_time = scrapy.Field()
-    pass
+
 
 class HotelItem(scrapy.Item):
     title = scrapy.Field()
@@ -31,4 +33,3 @@ class HotelItem(scrapy.Item):
     intro= scrapy.Field()
     tourist = scrapy.Field()
     comment = scrapy.Field()
-    pass
