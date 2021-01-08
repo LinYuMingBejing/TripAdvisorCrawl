@@ -50,5 +50,8 @@ class RestaurantPipeline(object):
         record.city = city
         record.area = area
 
-        self.session.merge(record)
-        self.session.commit()
+        try:
+            self.session.merge(record)
+            self.session.commit()
+        except:
+            self.session.rollback()
